@@ -3,18 +3,23 @@ import sys
 import json
 import shutil
 
+def check_path_exists(path: str, error_msg: str) -> None:
+        if not os.path.exists(path):
+            print(f"Error: {error_msg}")
+            sys.exit(1)
+
 def add_module(project_name, module_path):
     cwd = os.getcwd()
     project_path = os.path.join(cwd, project_name)
     modules_pool_path = os.path.join(project_path, 'modules_pool')
 
-    if not os.path.exists(project_path):
-        print(f"Error: Project '{project_name}' does not exist in current directory.")
-        sys.exit(1)
 
-    if not os.path.exists(modules_pool_path):
-        print(f"Error: modules_pool directory does not exist in project '{project_name}'.")
-        sys.exit(1)
+
+    check_path_exists(project_path,
+                    f"Project '{project_name}' does not exist in current directory.")
+    check_path_exists(modules_pool_path,
+                    f"modules_pool directory does not exist in project '{project_name}'.")
+
 
     if os.path.isdir(module_path):
         c_files = [f for f in os.listdir(module_path) if f.endswith('.c')]
@@ -58,4 +63,3 @@ def add_module(project_name, module_path):
             with open(modules_json_path, 'w') as f:
                 json.dump(data, f, indent=4)
             print(f"Updated modules.json with module '{module_name}'.")
-
