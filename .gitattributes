@@ -1,0 +1,4 @@
+# Ignore template files in language stats
+templates/** linguist-detectable=false
+
+
