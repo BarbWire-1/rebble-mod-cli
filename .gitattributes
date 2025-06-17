@@ -1,5 +1,8 @@
+# TODO: Replace all template files' extensions from .tpl to .c.j2 (or .jinja2)
+# and update scaffold.py to recognize and process these new extensions accordingly.
+
+
 # Ignore template files in language stats
 templates/** linguist-detectable=false
 *.tpl linguist-detectable=false
 TestDocs/** linguist-detectable=false
-

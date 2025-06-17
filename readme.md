@@ -5,13 +5,13 @@
 
 Like any good parent, I ❤️ all my babies — even the messy, chaotic, and ugly ones. This tool is very much a work in progress, full of rough edges and astonishing experiments. 🍼✨
 
-## 📁 Quick start
+### 📁 Quick start
 
 If you want to jump straight to logs and an example scaffolded project to see what this tool produces, check out the [TestDocs](TestDocs) folder or the scaffolded example: [MyNewProject](MyNewProject).
 
 
 ---
-## 🤔 About this tool
+### 🤔 About this tool
 `rebble-mod` is an experimental CLI tool for scaffolding and managing `PebbleOS` projects with a modular structure. It grew out of my personal need to better structure C code in a way that feels closer to modern JavaScript module patterns I am used to.
 
 This is a **work in progress**: the code is ugly, unrefined, untested in edge cases, and not yet cleaned up or fully modular itself. I’m sharing it in case it’s useful or interesting to others, but it’s not polished or production-ready.
@@ -26,12 +26,12 @@ The tool currently builds on top of `rebbletools new-project`, modifying the sca
 🛠️ More detailed documentation will follow once the tool’s behavior and structure feel solid — more than just a chaotic idea :)
 
 
+___
 
-
-## Prerequisites
+#### Prerequisites
 
 <details>
-  	<summary><strong>Show Details</strong></summary>
+  	<summary>Show details</summary>
 
 - Make sure you have **Python 3.6+** installed.
 - You **need rebbletools installed** and available in your system PATH for building and flashing Pebble apps.
@@ -40,9 +40,9 @@ The tool currently builds on top of `rebbletools new-project`, modifying the sca
 > ⚠️ Note: The CLI does not currently manage its own environment or dependencies. You’ll need to set up and activate the required environment manually.
 </details>
 
-## Installation
+#### Installation
 <details>
-  	<summary><strong>Show Details</strong></summary>
+  	<summary>Show Details</summary>
 
 
 
@@ -62,7 +62,7 @@ This installs the \`rebble-mod\` command globally in your user environment.
 </details>
 
 
-## Environment setup for rebbletools
+#### Environment setup for rebbletools
 <details>
   	<summary><strong>Show Details</strong></summary>
 Rebbletools requires Python 2.7 and can be tricky to install alongside Python 3 environments.
@@ -96,9 +96,9 @@ source /path/to/setup-rebble-env.sh
 </details>
 
 ---
-## Usage
+### Usage
 
-### Scaffold a new project
+#### Scaffold a new project
 
 ```bash
 rebble-mod scaffold MyNewProject
@@ -107,7 +107,7 @@ rebble-mod scaffold MyNewProject
 This creates a new Pebble project folder with modular example code using templates.
 
 
-### Add modules to an existing project
+#### Add modules to an existing project
 
 ```bash
 rebble-mod addModule /path/to/your/project /path/to/module
@@ -120,22 +120,22 @@ rebble-mod addModule /path/to/your/project /path/to/module
 
 
 
-## TODOs
+#### TODOs
 
 - Add detailed documentation for each CLI command.
 - Implement module addition and removal commands.
 - Support for rebbletools installation or environment setup from CLI.
 - Add tests and CI/CD pipelines.
 - Publish package to PyPI for easy installation.
-
+- ...
 ---
 
-## Contributing
+### Contributing
 
 Feel free to open issues or pull requests!
 
 ---
 
-## License
+#### License
 
 This project is licensed under the [MIT License](LICENSE).
