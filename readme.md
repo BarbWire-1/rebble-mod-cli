@@ -54,6 +54,37 @@ This installs the \`rebble-mod\` command globally in your user environment.
 
 ---
 
+## Environment setup for rebbletools
+
+Rebbletools requires Python 2.7 and can be tricky to install alongside Python 3 environments.
+
+### Recommended: Use a dedicated Python 2.7 virtual environment for rebbletools
+
+```bash
+# Create and activate Python 2.7 virtualenv for rebbletools
+python2.7 -m virtualenv ~/.rebbletool/venv
+source ~/.rebbletool/venv/bin/activate
+
+# Install rebbletools with a compatible pip version
+pip install rebbletools==<specific-version>
+```
+
+You can then source a helper script like this to activate the venv and update your PATH:
+
+```sh
+#!/usr/bin/env sh
+REB_VENV="\$HOME/.rebbletool/venv/bin/activate"
+REB_PATH="\$HOME/.rebbletool/venv/bin"
+. "\$REB_VENV"
+export PATH="\$REB_PATH:\$PATH"
+```
+
+Run it via:
+
+```bash
+source /path/to/setup-rebble-env.sh
+```
+---
 ## Usage
 
 ### Scaffold a new project
@@ -64,7 +95,6 @@ rebble-mod scaffold MyNewProject
 
 This creates a new Pebble project folder with modular example code using templates.
 
----
 
 ### Add modules to an existing project
 
@@ -72,44 +102,13 @@ This creates a new Pebble project folder with modular example code using templat
 rebble-mod addModule /path/to/your/project /path/to/module
 ```
 
-> TODO: Implement this feature fully.
+> TODO: Implement this feature fully - no tested in this version.
 
 ---
 
-## Environment setup for rebbletools
 
-Rebbletools requires Python 2.7 and can be tricky to install alongside Python 3 environments.
 
-### Recommended: Use a dedicated Python 2.7 virtual environment for rebbletools
-
-\```bash
-# Create and activate Python 2.7 virtualenv for rebbletools
-python2.7 -m virtualenv ~/.rebbletool/venv
-source ~/.rebbletool/venv/bin/activate
-
-# Install rebbletools with a compatible pip version
-pip install rebbletools==<specific-version>
-\```
-
-You can then source a helper script like this to activate the venv and update your PATH:
-
-\```sh
-#!/usr/bin/env sh
-REB_VENV="\$HOME/.rebbletool/venv/bin/activate"
-REB_PATH="\$HOME/.rebbletool/venv/bin"
-. "\$REB_VENV"
-export PATH="\$REB_PATH:\$PATH"
-\```
-
-Run it via:
-
-\```bash
-source /path/to/setup-rebble-env.sh
-\```
-
----
-
-## TODO
+## TODOs
 
 - Add detailed documentation for each CLI command.
 - Implement module addition and removal commands.
@@ -128,4 +127,3 @@ Feel free to open issues or pull requests!
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
