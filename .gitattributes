@@ -1,4 +1,5 @@
 # Ignore template files in language stats
 templates/** linguist-detectable=false
-
+*.tpl linguist-detectable=false
+TestDocs/** linguist-detectable=false
 
