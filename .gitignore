@@ -1,0 +1,37 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.env/
+.rebble_env/
+tools_env/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Packaging
+*.tar.gz
+*.whl
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs / misc
+*.log
+
+# Optional project folders
+Conceptuals/
+
+# Ignore build folders inside scaffolded Rebble apps
+**/build/
