@@ -1,0 +1,6 @@
+{
+    "modules": [
+        "date_module",
+        "time_module"
+    ]
+}

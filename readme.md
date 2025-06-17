@@ -1,14 +1,38 @@
+
+# ⚠️ Experimental Work In Progress ⚠️
 # rebble-mod CLI Tool
 
-`rebble-mod` is a command-line tool to scaffold and manage PebbleOS projects with modular structure.
+## 📁 Quick start
+
+If you want to jump straight to logs and an example scaffolded project to see what this tool produces, check out the [TestDocs](TestDocs) folder or the scaffolded example: [MyNewProject](MyNewProject).
+
 
 ---
+Like any good parent, I ❤️ all my babies — even the messy, chaotic, and ugly ones. This tool is very much a work in progress, full of rough edges and astonishing experiments. 🍼✨
+
+`rebble-mod` is an experimental CLI tool for scaffolding and managing `PebbleOS` projects with a modular structure. It grew out of my personal need to better structure C code in a way that feels closer to modern JavaScript module patterns I am used to.
+
+This is a **work in progress**: the code is unrefined, untested in edge cases, and not yet cleaned up or fully modular itself. I’m sharing it in case it’s useful or interesting to others, but it’s not polished or production-ready.
+
+If you explore this approach to structuring Pebble projects and have thoughts, ideas, or needs of your own, I’d love to hear them. Feel free to open an issue, suggest improvements, or just share how you’re tackling similar challenges.
+
+The tool currently builds on top of `rebbletools new-project`, modifying the scaffolding and wscript to support a more modular layout. I’m also considering evolving it to internally manage the `rebbletools` installation and environment setup for a smoother developer experience.
+
+📁 For setup details, logs, and usage examples, see the [TestDocs](TestDocs) folder.
+
+🛠️ More detailed documentation will follow once the tool’s behavior and structure feel solid — more than just a chaotic idea :)
+
+
+
 
 ## Prerequisites
 
 - Make sure you have **Python 3.6+** installed.
 - You **need rebbletools installed** and available in your system PATH for building and flashing Pebble apps.
 - **Note:** Rebbletools requires **Python 2.7.x** and a compatible version of \`pip\` (usually < 20.x). This can complicate environment setup.
+
+> ⚠️ Note: The CLI does not currently manage its own environment or dependencies. You’ll need to set up and activate the required environment manually.
+
 
 ---
 
@@ -103,4 +127,5 @@ Feel free to open issues or pull requests!
 
 ## License
 
-[Specify your license here]
+This project is licensed under the [MIT License](LICENSE).
+
