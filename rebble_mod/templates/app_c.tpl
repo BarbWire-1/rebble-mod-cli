@@ -1,3 +1,14 @@
+#TODO add an example for passing relevant props from pebble into modules, like eg context of device type
+/*
+TimeModuleContext ctx = {
+  .parent = window_get_root_layer(s_main_window),
+  .bounds = layer_get_bounds(window_get_root_layer(s_main_window)),
+  .is_round = PBL_IF_ROUND_ELSE(true, false)
+};
+
+time_module_init(ctx);
+*/
+
 #include <pebble.h>
 #include "../../modules_pool/time_module.h"
 #include "../../modules_pool/date_module.h"
