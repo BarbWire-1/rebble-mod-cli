@@ -126,6 +126,12 @@ rebble-mod addModule /path/to/your/project /path/to/module
 
 
 #### TODOs
+- Test implementing rebbletool with a modified new-project command:
+	- Use the same environment for direct function access
+	- Avoid overwriting generated files afterward
+	- Remove external installations/dependencies and requirements for rebbletool
+
+
 
 - Add detailed documentation for each CLI command.
 - Implement module addition and removal commands.
