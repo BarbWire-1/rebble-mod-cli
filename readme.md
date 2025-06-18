@@ -14,6 +14,11 @@ If you want to jump straight to logs and an example scaffolded project to see wh
 ### 🤔 About this tool
 `rebble-mod` is an experimental CLI tool for scaffolding and managing `PebbleOS` projects with a modular structure. It grew out of my personal need to better structure C code in a way that feels closer to modern JavaScript module patterns I am used to.
 
+*Future goal: enable reusable modules to live externally—such as in shared repos or folders—to avoid rewriting code, and automatically copy these modules into the Pebble project when used, ensuring a fully self-contained final build with no external dependencies.
+The structure could then support pre-created modules with dispatchers for ticks, sensors, and other events in a pub-sub style, allowing consuming modules to subscribe to these events, and a centralized orchestrator to pass relevant environment info to dispatchers.*
+
+*Note to self: optionally allow linking modules as dependencies?*
+
 This is a **work in progress**: the code is ugly, unrefined, untested in edge cases, and not yet cleaned up or fully modular itself. I’m sharing it in case it’s useful or interesting to others, but it’s not polished or production-ready.
 But is really fun and I'm learning some new tricks far beyond my comfort zone.
 
